@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>課題</title>
+    
+    <title>calc</title>
+
+    <script type="text/javascript" language="javascript">
+      function onButtonClick() {
+      var a = parseFloat(document.form1.textBox1.value);
+      var n = parseFloat(document.form1.textBox2.value);
+      var I = parseFloat(document.form1.textBox3.value);
+
+      var T = 100*((Math.tan(Math.PI/n) * (I*2*n)) / a);
+
+      document.form1.textBox4.value = T;
+      
+      }
+    </script>
+  </head>
+
+  <body>
+    <form name="form1">
+      半径a[mm]<br>
+      <input name="textBox1" type="text" value="" /><br>
+      角数n<br>
+      <input name="textBox2" type="text" value="" /><br>
+      電流I[A]<br>
+      <input name="textBox3" type="text" value="" /><br>
+      <input type="button" value="Calc" onclick="onButtonClick();" />
+      <hr/>
+      磁束密度[uT]<br>
+      <input name="textBox4" type="text" /><br>
+    </form>
+  </body>
+</html>
