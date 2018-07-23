@@ -2,7 +2,9 @@ FROM busybox
 
 MAINTAINER ap0sec <apo.t.laboratory@gmail.com>
 
-RUN mkdir /var/lib && \
-    mkdir /var/lib/mysql && \
-    mkdir /var/www/html && \
-    mkdir /var/www/sock
+RUN mkdir -p /var/lib && \
+    mkdir -p /var/lib/mysql && \
+    mkdir -p /var/www/html && \
+    mkdir -p /var/www/sock
+
+WORKDIR /var/www/sock
