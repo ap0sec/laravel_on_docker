@@ -6,5 +6,3 @@ RUN mkdir /var/lib && \
     mkdir /var/lib/mysql && \
     mkdir /var/www/html && \
     mkdir /var/www/sock
-
-ADD ./src/html/index.html /var/www/html

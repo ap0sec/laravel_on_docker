@@ -1,10 +1,8 @@
-FROM centos:7
+FROM php7.1/centos
 
 MAINTAINER ap0sec <apo.t.laboratory@gmail.com>
 
-RUN rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm \
-    && yum -y update && yum -y install --enablerepo=remi,remi-php71 php php-fpm php-xml \
-    useradd nginx
+RUN useradd nginx
 
 ADD ./conf/www.conf /etc/php-fpm.d/www.conf
 
