@@ -4,7 +4,7 @@ services:
     container_name: test_data
     build: ./data
     volumes:
-      - ./data/src:/var/www
+      - /var/www
       - /var/lib/mysql
   db:
     container_name: test_db
